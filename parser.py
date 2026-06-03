@@ -46,8 +46,16 @@ def organize_data(df):
     return data_table
 
 
+def csv_conversion(csv_path):
+    df = pd.read_csv(csv_path)
+
+    data_table = organize_data(df)
+
+    return data_table
+
+
 if __name__ == "__main__":
-    df = pd.read_csv("dataset/train.csv")
+    df = pd.read_csv(DATA_PATH)
 
     df_small = df.head(10)
 
